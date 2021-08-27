@@ -1,7 +1,14 @@
 package guru.springframework.sfgpetclinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity // An entity tell JPA that this is going to be an entity which is going to be persisted to the database
+@Table(name = "specialities")
 public class Speciality extends BaseEntity{
 
+    @Column(name = "description")
     private String description;
 
     public String getDescription() {
